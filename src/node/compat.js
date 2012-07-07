@@ -17,7 +17,7 @@ this.Miso.load = function(moduleName) {
     require(moduleName);
   } catch (ex) {
     // If path is not already full qualified prefix with cwd
-    if (!path.existsSync(moduleName)) {
+    if (!fs.existsSync(moduleName)) {
       moduleName = path.resolve(process.cwd(), moduleName);
     }
 
